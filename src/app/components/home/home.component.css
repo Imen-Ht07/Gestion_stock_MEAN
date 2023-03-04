@@ -1,0 +1,29 @@
+nav{
+    background: linear-gradient(-20deg,#264653 50%, #2a9d8f 50%);
+    font-family: "Font Awesome 5 Free";
+    padding: 15px;
+}
+
+button{
+    background-color: #2a9d8f;    
+}
+
+li a {
+    color: white !important;
+    text-decoration: none !important;
+    font-size: 25px;
+}
+li{ display: inline !important;
+    margin: 2%;
+    text-align: Left;
+  }
+
+body{
+    margin: 0;
+    padding: 0;
+}
+img{
+    height: 50%;
+    width: 100%;
+}
+

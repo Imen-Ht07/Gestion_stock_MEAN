@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url(https://unpkg.com/@webpixels/css@1.1.5/dist/index.css);
+@import url("https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.4.0/font/bootstrap-icons.min.css");
+
+* {
+    margin: 10;
+    padding: 10;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;}
+.table thead {
+    background: linear-gradient(-20deg, #264653 50%, #2a9d8f 50%);
+}
+
+.table thead th {
+    padding: 30px;
+    font-size: 20px;
+    color: white;
+    position: center;
+    text-align: center;
+
+}
+.table {
+    margin: 10px auto;
+    overflow-x: auto;
+}
+
+.table tbody td {
+    padding: 10px;
+    margin: 10px;
+    font-size: 18px;
+    font-weight: 200;
+   column-gap: 2em;
+   text-align: center;
+   overflow: hidden;
+   white-space: nowrap; /* Don't forget this one */
+   text-overflow: ellipsis;
+}
+h3{
+    font-size:85px;
+    color:  #3B556D;
+}
+header{
+    background-image: url("https://library.kissclipart.com/20180919/lgq/kissclipart-postman-package-clipart-mail-carrier-delivery-cour-76d52b8b6867d012.png");
+    background-repeat: no-repeat;
+    background-size: 20% 140%;
+}
+a{
+    margin: 10px;
+}
+input {
+    width: 130px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+    transition: width 0.4s ease-in-out;
+}
+input:focus {
+    width: 40%;
+  }

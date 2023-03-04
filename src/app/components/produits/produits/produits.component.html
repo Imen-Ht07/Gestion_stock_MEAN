@@ -1,0 +1,84 @@
+
+<!-- Title -->
+<header>
+<h3 class="font-weight-bold ml-md-0 mx-auto text-center text-sm-left" >Liste des Produits</h3>
+<!--Ajout-->
+<div class="text-sm-end">
+    <!--recherche-->
+    <span><i class="bi bi-search">
+    <input  type="text" name="search" placeholder="Search.."></i>
+    </span>
+    <!--home et ajout-->
+    <a class="btn bg-green-300 btn-lg active" role="button" aria-pressed="true" routerLink="/home" >
+        <span><i class="bi bi-house-fill"></i></span></a>
+    <a class="btn bg-blue-200 btn-lg active " role="button" aria-pressed="true" routerLink="/add-pr" >
+       <span> <i class="bi bi-file-plus-fill"></i></span></a> 
+</div>
+</header>
+<body>
+<!--Tableau-->
+        <table class="table table-responsive table-borderless table-striped">
+            <thead>
+                <th>#</th>
+                <th>&nbsp;</th>
+                <th>Produit</th>
+                <th>Description</th>
+                <th>Quantité</th>
+                <th>Prix</th>
+                <th>Status</th>
+                <th>Actions</th>
+            </thead>
+            <tbody>
+                <tr class="align-middle alert border-bottom" role="alert" *ngFor="let product of produits">
+                    <td>
+                        <div>
+                            <p class="m-0 fw-bold">{{product.idP}}</p>
+                        </div>
+                    </td>
+                    <td class="text-center"> <img class="pic" [src]="'http://localhost:3000/'+product.imageP" style="height: 100px; width: 100px;"> </td>
+                    <td>
+                        <div>
+                            <p class="m-0 fw-bold">{{product.nameP }}</p>
+                           
+                        </div>
+                    </td>
+                    <td>
+                        <div class="m-0 fw-bold" >{{product.description}}</div>
+                    </td>
+                    <td>
+                        <div >
+                            <p class="m-0 fw-bold">{{product.Qte}} </p>
+                        </div>
+                        </td>
+                    <td>
+                        <div >
+                            <p class="m-0 fw-bold">{{product.price}} </p>
+                        </div>  </td>
+                    <td class="px-6 py-4 text-center">
+                        <!-- Status-->
+                               <div *ngIf="product.Qte>0; then thenBlock else elseBlock"></div>
+                                <ng-template #thenBlock>
+                                 <span class=" btn-sm btn-neutral border-base mx-1 text-black text-sm w-1/3 pb-1 bg-green-300 font-semibold px-2 rounded-full">
+                                     Disponible </span>
+                                </ng-template>
+                                  <ng-template #elseBlock><span class=" btn-sm btn-neutral border-base mx-1 text-black text-sm w-1/3 pb-1 bg-red-300 font-semibold px-2 rounded-full"> 
+                                      Indisponible</span>
+                                  </ng-template>
+                            </td>
+                    <!--suppression-->
+                     <td>
+                        <div class="btn">
+                        <button type="submit" class="btn bg-red-100 btn-block" (click)="deleteProduit(product._id)" (click)="refresh()">
+                             <span > <i class="bi bi-trash-fill"></i></span>
+                        </button></div>
+                    <!--Modification-->
+                        <button class="btn bg-green-200 btn-active" role="button" aria-pressed="true" routerLink="/upd-pr/{{product._id}}">
+                             <span><i class="bi bi-pen-fill"></i></span>
+                        </button>
+                    </td>
+                </tr>
+                
+            </tbody>
+        </table>
+</body>
+

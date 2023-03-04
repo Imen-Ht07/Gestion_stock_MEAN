@@ -1,0 +1,46 @@
+  <div class="container card-0 justify-content-center ">
+        <div class="card-body px-sm-4 px-0">
+            <div class="row justify-content-center mb-5">
+                <div class="col-md-10 col">
+                    <h3 class="font-weight-bold ml-md-0 mx-auto text-center text-sm-left">  Ajouter un Fournisseur </h3>
+                </div>
+            </div>
+            <div class="row justify-content-center round">
+                <div class="col-lg-10 col-md-12 ">
+                    <div class="card shadow-lg card-1">
+                        <div class="card-body inner-card">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-5 col-md-6 col-sm-12">
+                                    <div class="form-group"><label for="first-name">Prenom</label>
+                                        <input type="text" class="form-control" id="first-name" [(ngModel)]= "FnsForm.fName"> </div>
+                                    <div class="form-group"> <label for="last-name">Nom</label> 
+                                        <input type="text" class="form-control" id="last-name" [(ngModel)]= "FnsForm.lName"> </div>
+                                    <div class="form-group"> <label for="CIN">N° CIN </label>
+                                         <input type="number" class="form-control" id="CIN" [(ngModel)]= "FnsForm.cin"> </div>
+                                   
+                                </div>
+                                <div class="col-lg-5 col-md-6 col-sm-12">
+                                    <div class="form-group"> <label for="Mobile-Number">N° Télephone </label>
+                                         <input type="tel" class="form-control" id="Mobile-Number"  [(ngModel)]= "FnsForm.tel"> </div>
+                                    <div class="form-group"> <label for="email">Email </label>
+                                        <input type="email" class="form-control" id="email" [(ngModel)]= "FnsForm.email"> </div>
+                                    <div class="form-group"> <label for="Adresse">Adresse</label>
+                                         <input type="text" class="form-control" id="Adresse"  [(ngModel)]= "FnsForm.adr"> </div>
+                                </div>
+                                    <div class="mb-2 mt-4">
+                                        <div class="text-md-end">
+                                            <button type="submit" class="btn btn-primary btn-block" (click)="addFournisseur()">
+                                                <small class="font-weight-bold">Ajouter</small>
+                                            </button>
+                                            <button type="reset"  class="btn  bg-gray-200  btn-block" routerLink="/fournisseurs">
+                                                <small class="font-weight-bold">Annuler</small></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+

@@ -1,0 +1,91 @@
+<div class="container card-0 justify-content-center ">
+    <div class="card-body px-sm-4 px-0">
+        <div class="row justify-content-center round">
+            <div class="col-lg-10 col-md-12 ">
+            <div class="card shadow-lg card-1">
+            <div class="card-body inner-card">
+                <div class="row justify-content-center">
+<!--Form-->
+<form>
+<div class="row justify-content-center">
+        <img src="../assets/bahria.png" >
+<div class="row justify-content-center mb-5">
+<div class="col-lg-5 col-md-6 col-sm-12">
+<label for="numF">	Facture № :</label>
+<input id="numF"  type='number' [(ngModel)]= "facForm.numF" class="form-control">
+
+<label for="date"> Date de facturation:</label> 
+<input id="date" type='date'  [(ngModel)]= "facForm.dateF" class="form-control">
+
+<label for="dateP">Échéance: </label>	
+<input id="dateP" type='date' [(ngModel)]= "facForm.echeance" class="form-control">
+</div>
+</div>
+<br>
+<!--Destinataire-->
+<div class="row justify-content-left">
+<div class="col-lg-5 col-md-6 col-sm-12">
+    <div class="form-group">
+<label for="client"> Nom du client:</label>	  
+<input  id="client" type="text"  [(ngModel)]= "facForm.nameD" class="form-control">
+
+<label for="adresse client"> Adresse du client:</label> 
+<input id="adresse client" type="text" [(ngModel)]= "facForm.adrD" class="form-control">
+
+<label for="tel client"> Télephone du client:</label> 
+<input id="tel client" type="tel"  [(ngModel)]= "facForm.telD" class="form-control">
+<br>
+<br>
+</div>
+</div>
+</div>
+<div class="col-lg-5 col-md-6 col-sm-12">
+<div class="form-group">
+    <label for="produit">Produit :</label> 
+        <input type="text" [(ngModel)]= "facForm.produit" class="form-control" id="produit"> 
+
+    <label for="qte"> Quantité: </label> 
+    <input type="number" [(ngModel)]= "facForm.qteF" class="form-control" id="qte" > 
+</div>
+</div>
+<div class="col-lg-5 col-md-6 col-sm-12">
+    <div class="form-group">
+        <label for="prix">Prix Unit:</label> 
+        <input type="number" [(ngModel)]= "facForm.prixUni" class="form-control" id="prix"> 
+
+        <label for="tot">Total HT:</label> 
+        <input type="number" [(ngModel)]= "facForm.totalHT" class="form-control" id="tot"> 
+</div>
+</div>
+<div><p> Total: </p> </div>
+<div><p> Total TTC: </p> </div>
+
+
+</div>
+</form>	
+
+<!--Bouton-->
+    <div class="mb-2 mt-4">
+        <div class="text-md-end">
+            <button type="submit" class="btn btn-primary btn-block" (click)="addFac()">
+            <small class="font-weight-bold">Ajouter une facture</small></button> 
+    </div>
+
+    <div class="text-md-left">	
+        <p>Nom de l'entreprise : Bahria Lumiére<br/>
+                Adresse: <br/>
+                Tél:<br/>
+        </p>
+        </div>
+    </div>
+<!--</div>-->
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+        
+        
+        </div>
+        </div>
+        

@@ -1,0 +1,77 @@
+
+<div class="container card-0 justify-content-center ">
+    <div class="card-body px-sm-4 px-0">
+<!--Titre-->
+         <div class="row justify-content-center mb-5"> 
+            <div class="col-md-10 col">
+<h3 class="font-weight-bold ml-md-0 mx-auto text-center text-sm-left">  Modifier un Produit </h3>
+            </div>
+        </div>
+<!--Forme-->
+<div *ngIf="productForm._id"  class="edit-form">
+<div class="row justify-content-center round " >
+<div class="col-lg-10 col-md-12 ">
+<div class="card shadow-lg card-1">
+<div class="card-body inner-card">
+    <div class="row justify-content-center">
+        <div class="row justify-content-center">
+<!--image-->
+     <div class="col-md-12 col-lg-10 col-12">
+        <div class="form-group files">
+           <label class="my-auto"> Image de produit </label>
+            <input id="file" type="file" class="form-control" [(ngModel)]= "productForm.imageP" (change)="loadImage($event)" />
+    </div>
+        </div>
+<!--part1--> 
+     <div class="col-lg-5 col-md-6 col-sm-12">
+         <div class="form-group">
+
+             <label for="id1">ID</label>
+            <input type="number" class="form-control" id="id1" [(ngModel)]= "productForm.idP">
+
+            <label for="name1"> Nom </label>
+            <input type="text" class="form-control" id="name1" [(ngModel)]= "productForm.nameP"> 
+                               
+            <label for="desc1">Description </label>
+            <input type="text" class="form-control" id="desc1" [(ngModel)]= "productForm.description">
+         </div>
+     </div>
+<!--part2-->
+    <div class="col-lg-5 col-md-6 col-sm-12">
+        <div class="form-group">
+            <label for="qte1"> Quantité </label> 
+            <input type="number"  class="form-control" id="qte1" [(ngModel)]= "productForm.Qte"> 
+
+            <label for="prix1">Prix</label> 
+            <input type="number" class="form-control" id="prix1" [(ngModel)]= "productForm.price"> 
+        </div>
+     </div>
+<!--Bouton-->
+    <div class="mb-2 mt-4">
+    <div class="text-md-end">
+        <button type="submit" class="btn btn-primary btn-block" (click)="updateProduit()" routerLink="/produits">
+            <small class="font-weight-bold">Modifier</small></button> 
+        <button type="reset"  class="btn bg-gray-200 btn-block" routerLink="/produits">
+                <small class="font-weight-bold">Annuler</small></button>
+    </div>
+    </div>
+<!--NGIF*-->
+    
+    <div *ngIf="!productForm._id">
+        <br/><p> Cannot access this product...</p>
+    </div>
+<!--fermeture de div -->
+    </div>
+</div>                       
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+
+
+

@@ -1,0 +1,71 @@
+<header>
+<!-- Title -->
+<h3 class="font-weight-bold ml-md-0 mx-auto text-center text-sm-left" >Liste des Factures</h3>
+<!--Ajout-->
+<div class="text-sm-end">
+	<span><i class="bi bi-search">
+	<input  type="text" name="search" placeholder="Search.."></i>
+	</span>
+	<a class="btn bg-green-300 btn-lg active" role="button" aria-pressed="true" routerLink="/home" >
+        <span><i class="bi bi-house-fill"></i></span></a>
+    <a class="btn bg-blue-200 btn-lg active " role="button" aria-pressed="true" routerLink="/add-fac" >
+       <span> <i class="bi bi-file-plus-fill"></i></span></a> 
+</div>
+</header>
+<body>
+<!--tableau-->
+<table class="table table-responsive table-borderless table-striped">
+	<thead>
+		<th>N° facture</th>
+		<th>Client</th>
+		<th>TotalHT</th>
+		<th>TotalTTC</th>
+		<th>Date de création</th>
+		<th>Actions</th>
+	</thead>
+	<tbody>
+		<tr class="align-middle alert border-bottom" role="alert" *ngFor="let facture of factures">
+			<td>
+				<div>
+					<p class="m-0 fw-bold">{{facture.numF}}</p>
+				</div>
+			</td>
+			<td>
+				<div>
+					<p class="m-0 fw-bold">{{facture.nameD}}</p>
+				</div>
+			</td>
+			<td>
+				<div>
+					<p class="m-0 fw-bold">{{facture.totalHT}}</p>
+				   
+				</div>
+			</td>
+			<td>
+				<div>
+				   <p class="m-0 fw-bold">{{facture.totalTTC}} </p></div>
+			</td>
+			<td>
+				<div >
+					<p class="m-0 fw-bold">{{facture.dateF}} </p>
+				</div>
+				</td>
+			
+			
+			<!--suppression-->
+			 <td>
+				<div class="btn">
+				<button type="submit" class="btn bg-red-100 btn-block" >
+					 <span > <i class="bi bi-trash-fill"></i></span>
+				</button></div>
+			<!--Modification-->
+				<button class="btn bg-green-200 btn-active" role="button" aria-pressed="true" >
+					 <span><i class="bi bi-pen-fill"></i></span>
+				</button>
+			</td>
+		</tr>
+		
+	</tbody>
+</table>
+</body>
+

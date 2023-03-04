@@ -1,0 +1,94 @@
+body {
+    background-color: #eee
+}
+h3{
+    font-size:85px;
+    color:white
+}
+.card-0 {
+    min-height: 110vh;
+    background: linear-gradient(-20deg,  #2a9d8f 50%, #3B556D 50%);
+    color: white;
+    border: 0px
+}
+.container {
+    padding-top: 100px !important;
+    border-radius: 20px
+}
+
+.btn {
+    letter-spacing: 1px
+}
+
+select:active {
+    box-shadow: none !important;
+    outline-width: 0 !important
+}
+
+select:after {
+    box-shadow: none !important;
+    outline-width: 0 !important
+}
+
+label {
+    margin-bottom: 2px;
+    font-weight: bolder;
+    font-size: 14px
+}
+
+button:focus {
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    outline-width: 0
+}
+button{
+    background-color: #3B556D;
+    padding: 10px;
+    margin: 5px;
+}
+.form-control {
+    height: calc(2em + .75rem + 3px)
+}
+
+.inner-card {
+    margin: 79px 0px 70px 0px
+}
+
+.card-0 {
+    margin-top: 100px;
+    margin-bottom: 100px
+}
+
+.card-1 {
+    border-radius: 17px;
+    color: black;
+    box-shadow: 2px 4px 15px 0px rgb(0, 0, 0, 0.5) !important
+}
+
+.color input {
+    background-color: #f1f1f1
+}
+
+#file {
+    border: 2px dashed #92b0b3 !important
+}
+.files:before {
+    position: absolute;
+    bottom: 60px;
+    left: 0;
+    width: 100%;
+    content: attr(data-before);
+    color: #000;
+    font-size: 12px;
+    font-weight: 600;
+    text-align: center
+}
+
+#file {
+    display: inline-block;
+    width: 100%;
+    padding: 95px 0 0 100%;
+    background: url('https://i.imgur.com/VXWKoBD.png') top center no-repeat #fff;
+    background-size: 55px 55px
+}

@@ -1,0 +1,76 @@
+<header>
+<!-- Title -->
+<h3 class="font-weight-bold ml-md-0 mx-auto text-center text-sm-left" >
+Liste des Fournisseurs</h3>
+
+<!--Ajout-->
+<div class="text-sm-end">
+    <span><i class="bi bi-search">
+    <input  type="text" name="search" placeholder="Search.."></i></span>
+        
+    <a class="btn bg-green-300 btn-lg active" role="button" aria-pressed="true" routerLink="/home" >
+        <span><i class="bi bi-house-fill"></i></span></a>
+    <a class="btn bg-blue-200 btn-lg active " role="button" aria-pressed="true" routerLink="/add-fr" >
+       <span> <i class="bi bi-file-plus-fill"></i></span></a> 
+</div>
+</header>
+<body> 
+<!--Tableau-->
+        <table class="table table-responsive table-borderless table-striped">
+            <thead>
+                <th>CIN</th>
+                <th>Prénom</th>
+                <th>Nom</th>
+                <th>N°Téléphone</th>
+                <th>Adresse</th>
+                <th>Email</th>
+                <th>Actions</th>
+            </thead>
+            <tbody>
+                <tr class="align-middle alert border-bottom" role="alert" *ngFor="let Fournisseur of fournisseurs">
+                    <td>
+                        <div>
+                            <p class="m-0 fw-bold">{{Fournisseur.cin}}</p>
+                        </div>
+                    </td>
+                    <td>
+                        <div>
+                            <p class="m-0 fw-bold">{{Fournisseur.fName}}</p>
+                           
+                        </div>
+                    </td>
+                    <td>
+                        <div>
+                           <p class="m-0 fw-bold"> {{Fournisseur.lName}}</p></div>
+                    </td>
+                    <td>
+                        <div >
+                            <p class="m-0 fw-bold">{{Fournisseur.tel}} </p>
+                        </div>
+                        </td>
+                    <td>
+                        <div >
+                            <p class="m-0 fw-bold">{{Fournisseur.adr}} </p>
+                        </div>  </td>
+                    <td>
+                         <div >
+                            <p class="m-0 fw-bold">{{Fournisseur.email}} </p>
+                         </div>  </td>
+                    
+                    <!--suppression-->
+                     <td>
+                        <div class="btn">
+                        <button type="submit" class="btn bg-red-100 btn-block" (click)="deleteFournisseur(Fournisseur._id)" (click)="refresh()">
+                             <span > <i class="bi bi-trash-fill"></i></span>
+                        </button></div>
+                    <!--Modification-->
+                        <button class="btn bg-green-200 btn-active" role="button" aria-pressed="true" routerLink="/upd-fr/{{Fournisseur._id}}">
+                             <span><i class="bi bi-pen-fill"></i></span>
+                        </button>
+                    </td>
+                </tr>
+                
+            </tbody>
+        </table>
+</body>
+

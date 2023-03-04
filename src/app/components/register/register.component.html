@@ -1,0 +1,53 @@
+<body>
+  <div class="contact-form">
+    <img alt="" class="avatar" src="../assets/bahria.png">
+      <div class="h4 text-muted text-center pt-2">Create your Account</div>
+      <br>
+      <form class="pt-3" [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+        <div class="field">
+          <input type="text" placeholder="First Name" class="form-control" formControlName="firstName" required>
+        </div> 
+            <!--<div *ngIf="submitted && f.firstName.errors" class="text-danger">
+                <div *ngIf="f.firstName.errors.required">First Name is required</div>
+                <div *ngIf="f.firstName.errors.pattern">First Name not valid.</div>
+              </div>-->
+        <div class="field">
+          <input type="text" placeholder="Last Name" class="form-control" formControlName="lastName" required>
+        </div>    
+            <!--<div *ngIf="submitted && f.lastName.errors" class="text-danger">
+                <div *ngIf="f.lastName.errors.required">Last Name is required</div>
+                <div *ngIf="f.lastName.errors.pattern">Last Name not valid.</div>
+              </div>-->
+        
+        <div class="field">
+          <input type="email" placeholder="Email Address" class="form-control" formControlName="email" required>
+        </div> 
+            <!--<div *ngIf="submitted && f.email.errors" class="text-danger">
+                <div *ngIf="f.email.errors.required">email is required</div>
+                <div *ngIf="f.email.errors.pattern">email name not valid.</div>
+              </div> -->
+          
+        <div class="field space">
+                <input type="password" placeholder="Enter your Password" 
+                 class="form-control" formControlName="password" required> 
+        </div>
+              
+              <!--<div *ngIf="submitted && f.password.errors" class="text-danger">
+                <div *ngIf="f.password.errors.required">password is required</div>
+                <div *ngIf="f.password.errors.pattern">password name not valid.</div>
+              </div>-->
+      
+          <div>
+            <button class="custom-btn btn-4" type="submit">Register</button>
+          </div>
+          <br>
+          <div class="text-center register-link">
+            Already have an account?
+            <a routerLink="">Login Now</a>
+          </div>
+      </form>
+   </div>
+
+  </body>
+  
+  
